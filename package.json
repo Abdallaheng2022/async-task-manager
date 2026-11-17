@@ -1,0 +1,26 @@
+{
+  "name": "async-task-manager",
+  "version": "1.0.0",
+  "description": "Async Task Management Backend with TypeScript (Session 2 assignment)",
+  "type": "module",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.test.json",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "verify": "npm run typecheck && npm test && npm run build && npm start",
+    "clean": "rm -rf dist"
+  },
+  "keywords": ["nodejs", "typescript", "esm", "async-await"],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
